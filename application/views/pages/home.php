@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 ?>
-<h1>Github API User and Follower Information</h1>
+<h3>Github API User and Follower Information</h3>
 <h3><?php //echo $page_item['title'];  ?></h3>
 <div class="main">
     <?php //echo $page_item['text'];  ?>
