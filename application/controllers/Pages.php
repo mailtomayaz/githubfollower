@@ -47,7 +47,11 @@ class Pages extends CI_Controller {
         $resp = $this->makeApiCall($requestUrl);
         //decode json data
         $jsonData = json_decode($resp);
-        //print_r($jsonData);
+       // print_r($jsonData);
+        //error hanling
+        if(isset($jsonData->message)){
+            echo $jsonData->message;
+        }else{
         //make data for frontvew
         $htmlData = '';
         if ($pg == '') {
@@ -96,6 +100,7 @@ class Pages extends CI_Controller {
         }
 
         echo $htmlData;
+        }
     }
 
     //function to make API call
