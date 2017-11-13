@@ -47,7 +47,6 @@ class Pages extends CI_Controller {
         $resp = $this->makeApiCall($requestUrl);
         //decode json data
         $jsonData = json_decode($resp);
-       // print_r($jsonData);
         //error hanling
         if(isset($jsonData->message)){
             echo $jsonData->message;
@@ -105,14 +104,13 @@ class Pages extends CI_Controller {
 
     //function to make API call
     public function makeApiCall($requestUrl) {
-        //echo $url;
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_URL => $requestUrl,
             CURLOPT_USERAGENT => 'Codular Sample cURL Request'
         ));
-//Send the request & save response to $resp
+    //Send the request & save response to $resp
         // return $resp;
         $resp = curl_exec($curl);
         return $resp;
