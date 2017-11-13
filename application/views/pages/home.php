@@ -28,6 +28,16 @@ echo form_open('pages/searchuser', $attributes);
 <div id="notification-bar"></div>
 <div id="userhandle"> </div>
 <div class="follower_count"></div>
-<div class="followers_avatar"></div>
+<div class="followers_avatar">
+    <table id="followers_avatar">
+           <tr>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Avatar</th>
+           </tr>
+       </table>
+    
+    
+</div>
 <div id="loader"></div>
 </div>
