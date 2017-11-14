@@ -44,14 +44,14 @@ class Pages extends CI_Controller {
      * @return string all data of user and followers as select with per page
      */
 
-    public function searchuser($user = '', $page = '') {
+    public function searchUser($user = '', $page = '') {
         $data['title'] = 'Create a news item';
         $this->load->view('templates/header', $data);
         // Get cURL resource
         // Set some options - we are passing in a useragent too here
         $requestUrl = '';
         $nextPage = '';
-        $perPage = 3;
+        $perPage = 50;
         if ($page == '') {
 
             $requestUrl = "https://api.github.com/users/$user?client_id=71e6fed3ec0de9f1b18f&client_secret=ee5951f5916e469a632a4aacc04aac178dfa73f8";

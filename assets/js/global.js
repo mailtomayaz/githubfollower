@@ -1,10 +1,9 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ * To add custom JS to the github application
+ *  Global JavaScript File for working with jQuery library
+ *  
+ *  */
 
-/* Global JavaScript File for working with jQuery library */
 // execute when the HTML file's (document object model: DOM) has loaded
 
 $(document).ready(function () {
@@ -20,8 +19,9 @@ $(document).ready(function () {
         $('#loader').show();
         //get user name
         var username = $('#username').val();
-        gethandle(username);
+        getHandle(username);
         //get follower data
+        $('#followers_avatar').show();
         getFollowers(username, 1);
         //get followers
     });
@@ -32,7 +32,7 @@ $(document).ready(function () {
      * @returns string github user handle and followers count
      */
 
-    function gethandle(usr) {
+    function getHandle(usr) {
         $.get(path + "/" + usr,
                 function (data, status) {
                     if (status === 'success') {
@@ -90,8 +90,9 @@ $(document).ready(function () {
         var username = $('#username').val();
         //get handle
         //user handle data
-        gethandle(username);
+        getHandle(username);
         //user follwer data
+         $('#followers_avatar').show();
         getFollowers(username, pageNo);
         $(this).remove();
 
