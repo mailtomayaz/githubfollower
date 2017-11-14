@@ -38,10 +38,13 @@ footer {margin: 50px 0px; text-align: center;}
 h3{
     text-align: center;
 }
-table td{
+/*table td{
     border: 1px solid #ccc;
     text-align: center;
 }
 form table td{
     border: none;
 }
+#followers_avatar{
+    display:none;
+}*/

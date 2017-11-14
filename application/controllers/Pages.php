@@ -108,7 +108,7 @@ class Pages extends CI_Controller {
                 $htmlData .= '<tr>';
                 
                 if ($readMore != 'hide') {
-                    $htmlData .= "<td colspan='3'><button class='showmore' page_no=$readMore id='showmore' href='#'>Load More</button></td>";
+                    $htmlData .= "<td><button class='showmore' page_no=$readMore id='showmore' href='#'>Load More</button></td>";
                 }
                 
                 $htmlData .= '</tr>';
