@@ -6,7 +6,10 @@
  * and open the template in the editor.
  */
 ?>
+<footer>
      <em>&copy; 2017</em>
-     </div>
+     
+</footer>
+</div>
         </body>
 </html>

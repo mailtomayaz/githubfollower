@@ -70,9 +70,11 @@ class Pages extends CI_Controller {
             //make data for frontvew
             $htmlData = '';
             if ($page == '') {
-
-                $htmlData .= '<div class="handle"> User Handle: ' . $jsonData->login . '</div>';
-                $htmlData .= '<div class="followers"> No Of Followers: ' . $jsonData->followers . '</div>';
+                $htmlData .='<table>';
+                $htmlData .= '<tr><td><div class="handle"> Handle :<b> ' . $jsonData->login . '</b></div></td>';
+                $htmlData .= '<td><div class="followers">  Followers:<b> ' . $jsonData->followers . '</b></div></td></tr>';
+                $htmlData .='</table>';
+                
             } else {
 
                 //get number of followers
@@ -106,7 +108,7 @@ class Pages extends CI_Controller {
                 $htmlData .= '<tr>';
                 
                 if ($readMore != 'hide') {
-                    $htmlData .= "<td><button class='showmore' page_no=$readMore id='showmore' href='#'>Load More</button></td>";
+                    $htmlData .= "<td colspan='3'><button class='showmore' page_no=$readMore id='showmore' href='#'>Load More</button></td>";
                 }
                 
                 $htmlData .= '</tr>';

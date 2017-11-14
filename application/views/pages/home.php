@@ -20,7 +20,7 @@ echo form_open('pages/searchuser', $attributes);
         <td><label for="title">User Name</label></td>
         <td><input type="input" name="title" id="username" /></td>
         <td><input id="getuser" type="submit" name="submit" value="Search Users" /></td>
-    <input type="hidden" id="con_pag" value='1' />
+        <input type="hidden" id="con_pag" value='1' />
 
 </table>
 </form>
