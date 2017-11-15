@@ -13,7 +13,7 @@
 <?php
 $attributes = array('name' => 'usercheck', 'id' => 'usercheck');
 //user search form
-echo form_open('pages/searchUser', $attributes);
+echo form_open('followers/searchUser', $attributes);
 ?>
 <table>
     <tr>
